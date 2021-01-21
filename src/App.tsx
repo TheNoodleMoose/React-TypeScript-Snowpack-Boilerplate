@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
-import './App.css';
 
 interface AppProps {}
 
@@ -14,9 +13,8 @@ function App({}: AppProps) {
   }, [count, setCount]);
   // Return the App component.
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="container">
+      <header className="flex flex-col items-center justify-center">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -25,7 +23,7 @@ function App({}: AppProps) {
         </p>
         <p>
           <a
-            className="App-link"
+            className="text-2xl text-blue-400 m-2"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -33,6 +31,7 @@ function App({}: AppProps) {
             Learn React
           </a>
         </p>
+        <button className="rounded-md bg-black text-white">Click Me!</button>
       </header>
     </div>
   );
